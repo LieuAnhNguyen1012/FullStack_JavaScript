@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Oswald, sans-serif;
+}
+
+/* HEADER */
+header{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+header ul{
+    list-style-type: none;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+    width: 70%;
+    padding: 20px 0;
+}
+header ul li{
+    margin: 0 5px;
+    display: inline;
+    padding: 0 20px;
+}
+header ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+
+    transition: color 0.5s;
+}
+header ul li a:hover{
+    color: #e62b4a;
+}
+
+header .logo a{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+}
+header .active{
+    color: #e62b4a;
+}
+
+/* CAROUSEL */
+.carousel{
+    background-image: url('../img/home_slider.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+.carousel-content p{
+    font-size: 25px;
+}
+.carousel-content h1{
+    font-size: 75px;
+}
+.carousel-arrow a{
+    font-size: 50px;
+    color: white;
+}
+.carousel-content button{
+    color: white;
+    font-size: 16px;
+    padding: 15px 30px;
+    background-color: #e62b4a;
+    border: 1px solid #e62b4a;
+    border-radius: 5px;
+
+    transition: all 0.5s;
+}
+.carousel-content button:hover{
+    background-color: #af2239;
+}
+
+/* SHOWCASE */
+.showcase{
+    padding: 100px 0;
+}
+.showcase-container{
+    width: 70%;
+    margin: auto;
+}
+.showcase-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.showcase-title p{
+    font-size: 14px;
+    color: #888888;
+}
+.showcase-title h2{
+    font-size: 50px;
+    font-weight: 500;
+}
+.showcase-title span{
+    font-size: 16px;
+    color: #888888;
+    font-weight: bold;
+}
+.showcase-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.showcase-content img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* NUMEBR */
+.number{
+    background-color: black;
+    padding: 100px 0;
+
+}
+.number-content{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    width: 70%;
+    margin: 0 auto;
+}
+.number-items{
+    width: 25%;
+}
+.number-items p{
+    font-size: 20px;
+    color: #888888;
+}
+.number-items .counter{
+    font-size: 60px;
+    font-weight: 300;
+    color: white;
+
+}

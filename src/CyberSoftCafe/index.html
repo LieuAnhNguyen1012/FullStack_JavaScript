@@ -1,0 +1,102 @@
+<!DOCTYPE html>   <!-- định nghĩa loại tài liệu HTML -->
+<html>   <!-- thẻ html là thẻ gốc(root) của tài liệu HTML -->
+ <head> 
+    <meta name="description" content="Cafe Nguyên Chất - Nơi gặp gỡ và thư giãn">
+    <title>CyberSoft Cafe Nguyên Chất</title> 
+ </head>
+ <body>
+
+    <h1 style="color:rgb(243, 238, 238);background-color:rgb(57, 74, 89);text-align:center" >CyberSoft Cafe</h1>
+
+    <a href="">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="https://vscodethemes.com/e/enkia.tokyo-night/tokyo-night" target="_blank">Order</a>
+
+    <hr style="height:1px;width:50%"noshade>
+    <h2 style="text-align:center; font: size 100%;color:rgb(153, 102, 51)" >  About our cafe  </h2>
+    <p style="text-align:right; font: size 100%" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <br> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <br><b><i> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</b></i>
+        <br><b> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu pariatur</b>
+        <br><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i>
+
+    </p>
+    <!-- thẻ i là in nghiêng, thẻ b là in đậm, thẻ u là gạch chân, thẻ s là gạch ngang -->
+     <!-- vừa in nghiêng vừa in đậm <b><i>vừa in nghiêng vừa in đậm</i></b> -->
+    <hr style="height:1px;width:50%"noshade>
+    <h2 style="text-align:center; font: size 100%;color:rgb(153, 102, 51)" >  Special Items  </h2>
+    <h3>The coffee list 1  </h3>
+    <!-- ds có thứ tự là <ol> và không có thứ tự là <ul>     -->
+    <!-- ol > li * 3 -->
+    <ol style="list-style-type:circle" >
+        <li><a href="">Black Coffee</a></li>
+        <li><a href="">Pink Coffee</a></li>
+        <li><a href="">Green Tea</a></li>
+    </ol>
+    <img src="./img/chilling-cafe-11.jpg" alt="capuchino">
+    <img src="./img/chilling-cafe-12.jpg" alt="latte">
+    <!-- alt là nội dung mô tả hình ảnh -->
+     <h3>The coffee list 2  </h3>
+    <ul style="list-style-type:upper-roman" >
+        <li>Soft Deli Cup</li>
+        <li>Coffee Art</li>
+        <li>Speciality Tea</li>
+    </ul>
+    <img src="./img/chilling-cafe-13.jpg" alt="cafe đá xay" width="800px" height="800px">
+
+    <h2 id="menu" style="text-align:center; font: size 100%;color:rgb(153, 102, 51)" >  Menu  </h2>
+    <!-- th:table header, td: table data, tr: table row, table: bảng -->
+    <!-- quy tắc tạo bảng: hàng đầu tiên là header, các hàng tiếp theo là data, mỗi hàng có số cột bằng nhau, nếu muốn gộp cột thì dùng colspan, gộp hàng thì dùng rowspan -->
+
+    <table style="width:800px;height:400px" border="5" align="center" cellspacing="0">
+        <!-- hàng 1 có 3 cột tr>th*3 -->
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td rowspan="4" style="background-image: url(./img/chilling-cafe-11.jpg);">Traditional Coffee</td>
+            <td rowspan="2">Vietnamese coffee pin</td>
+            <td>Hot</td>
+            <td>60.000</td>
+        </tr>
+        <tr>
+            <td>Cold</td>
+            <td>28.000</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Milk coffee</td>
+            <td>Hot</td>
+            <td>38.000</td>
+        </tr>
+        <tr>
+            <td>Cold</td>
+            <td>54.000</td>
+        </tr>
+        <tr>
+            <td rowspan="4" style="background-image: url(./img/chilling-cafe-12.jpg);">Expresso</td>
+            <td>American Coffee</td>
+            <td rowspan="3">Hot</td>
+            <td>110.000</td>
+        </tr>
+        <tr>
+            <td>Machiato</td>
+            <td rowspan="2">40.000</td>
+        </tr>
+        <tr>
+            <td>Cappuchino</td>
+        </tr>
+
+    </table>
+    <hr style="height:1px;width:50%"noshade>
+    <h2 style="text-align:center; font: size 100%;color:rgb(153, 102, 51)" >  Talk to us  </h2>
+    <p style="text-align:center; font: size 100%">
+     Reach us via<b> Email: <a href="">cybercafe@gmail.com</a></b> or <b>Hotline:<a href=""> 0961 051 014</a></b><br> Thank you for visiting our cafe! </p>
+ </body>
+</html>
+
+
+
+<!-- Để note trong hmtl (tô đen + crtl + /) bạn có thể sử dụng thẻ comment trong HTML. -->
