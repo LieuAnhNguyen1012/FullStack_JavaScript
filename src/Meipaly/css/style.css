@@ -4,6 +4,7 @@
 }
 body {
     font-family: Oswald, sans-serif;
+    
 }
 
 /* HEADER */
@@ -117,18 +118,71 @@ header .active{
     color: #888888;
     font-weight: bold;
 }
-
 .showcase-content{
     display: grid;
+    gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 }
 .showcase-items{
     height: 408px;
+    /* cha overlay */
+    position: relative;
+    
+}
+.showcase-overlay{
+    /* con overlay */
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* mã màu trong suốt rgba */
+    background-color:rgba(230, 43, 74, 0.568);
+}
+.showcase-icon{
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.showcase-items:hover .showcase-icon{
+    transform: translateY(0);
+}
+.showcase-items:hover .showcase-text{
+    transform: translateY(0);
+}
+.showcase-icon a{
+    /* padding: 6px; */
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* border-radius: 20%; */
+    /* căn giữa icon + text-align: center + line-height: "bằng với chiều cao" */
+    text-align: center;
+    line-height: 40px;
+
+    background-color: white;
+    color: black;
+}
+.showcase-text{
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+    color: white;
+
+    transform: translateY(50px);
+    transition: 0.5s;
 }
 .showcase-items img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
+    filter: grayscale(100%) contrast(50%);
 }
 
 
