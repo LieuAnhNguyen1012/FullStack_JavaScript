@@ -117,13 +117,18 @@ header .active{
     color: #888888;
     font-weight: bold;
 }
+
 .showcase-content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.showcase-content img{
+.showcase-items{
+    height: 408px;
+}
+.showcase-items img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 
