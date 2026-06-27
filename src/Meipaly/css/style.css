@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: Oswald, sans-serif;
+html, body {
+    font-family: "Oswald", sans-serif;
     
 }
 
@@ -76,13 +76,14 @@ header .active{
     color: white;
 }
 .carousel-content button{
+    font-family: Oswald, sans-serif;
     color: white;
+    
     font-size: 16px;
     padding: 15px 30px;
     background-color: #e62b4a;
     border: 1px solid #e62b4a;
     border-radius: 5px;
-
     transition: all 0.5s;
 }
 .carousel-content button:hover{
@@ -139,14 +140,23 @@ header .active{
     height: 100%;
     /* mã màu trong suốt rgba */
     background-color:rgba(230, 43, 74, 0.568);
+    /* trước khi hover */
+    opacity: 0;
+    transition: all 0.5s;
+    /* che đi phần tràn khỏi thẻ cha */
+    overflow: hidden;
 }
+.showcase-items:hover .showcase-overlay{
+    opacity: 1;
+}
+
 .showcase-icon{
     position: absolute;
 
     top: 25px;
     right: 25px;
     transform: translateY(50px);
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 .showcase-items:hover .showcase-icon{
     transform: translateY(0);
@@ -175,7 +185,7 @@ header .active{
     color: white;
 
     transform: translateY(50px);
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 .showcase-items img{
     height: 100%;
