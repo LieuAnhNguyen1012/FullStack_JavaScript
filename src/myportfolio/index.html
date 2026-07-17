@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- BS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- FontAS Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="myPort-carousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/finland.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/mountains.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/mountains-1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="projects py-5">
+        <div class="container">
+
+            <!-- Hệ thống nút bấm các Tab (Giữ nguyên) -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Profile</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Contact</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                        aria-selected="false" disabled>Disabled</button>
+                </li>
+            </ul>
+
+            <!-- Vùng chứa nội dung các Tab -->
+            <div class="tab-content" id="pills-tabContent">
+
+                <!-- TAB HOME: Đã đưa tất cả 6 hình ảnh từ dưới vào đây -->
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                    <div class="row">
+
+                        <!-- Hàng 1 - Cột 1 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 1 - Cột 2 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 1 - Cột 3 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 - Cột 4 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 - Cột 5 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hàng 2 - Cột 6 -->
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="./img/g6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                    <p class="card-text">Branding</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Các tab còn lại (Giữ nguyên) -->
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                    tabindex="0">...</div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="myPort-skills">
+        <!-- <div class="overlay"></div> -->
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h2>I'm Available For Hire</h2>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis
+                    dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <div class="skill-items">
+                        <i class="fa fa-paint-brush"></i>
+                        <h4>Design</h4>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <div class="skill-items">
+                        <i class="fa fa-shekel-sign"></i>
+                        <h4>Marketing</h4>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    <div class="skill-items">
+                        <i class="fa fa-camera"></i>
+                        <h4>Photography</h4>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="myPort-awards">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 col-md-6 col-12">
+
+                    <div class="awards-left">
+                        <h2>Our Achievement and Award</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                            ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-12">
+                    <div class="awards-right">
+                        <p>Luctus porta semper aptent morbi. Vestibulum lectus tempus augue dictumst enim commodo
+                            facilisis. Mus laoreet scelerisque habitant urna dui sem diam. Purus dis nam eget.
+                            Scelerisque placerat lectus lorem etiam. Elementum integer phasellus lectus.</p>
+
+                            <!-- row row-cols-1 row-cols-sm-2 row-cols-md-4 -->
+                        <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-4 row-cols-3">
+                            <div class="col">
+                                <img src="./img/award-1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="./img/award-2.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="./img/award-3.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="./img/award-4.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="./img/award-5.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- BS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
