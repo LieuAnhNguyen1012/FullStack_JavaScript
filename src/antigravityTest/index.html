@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="array-playground" id="arrayPlayground">
+      <div class="array-orb array-orb--one" aria-hidden="true"></div>
+      <div class="array-orb array-orb--two" aria-hidden="true"></div>
+
+      <div class="array-container">
+        <header class="array-hero">
+          <div>
+            <span class="array-eyebrow">Array Algorithm Playground</span>
+            <h1>Hiểu thuật toán qua từng chuyển động</h1>
+            <p>
+              Nhập mảng số nguyên, thực hiện từng bài và quan sát cách dữ liệu
+              được duyệt, lựa chọn hoặc biến đổi.
+            </p>
+          </div>
+
+          <div class="array-hero__badge">
+            <strong>10</strong>
+            <span>Bài trực quan</span>
+          </div>
+        </header>
+
+        <!-- KHU NHẬP MẢNG -->
+        <section class="array-workspace" aria-labelledby="arrayInputTitle">
+          <div class="array-workspace__header">
+            <div>
+              <span class="array-section-label">Dữ liệu đầu vào</span>
+              <h2 id="arrayInputTitle">Tạo mảng số nguyên</h2>
+            </div>
+
+            <span class="array-live-status">
+              <span aria-hidden="true"></span>
+              Sẵn sàng xử lý
+            </span>
+          </div>
+
+          <div class="array-input-row">
+            <div class="array-field">
+              <label for="numberInput">Số nguyên</label>
+              <input
+                type="number"
+                id="numberInput"
+                step="1"
+                placeholder="Ví dụ: 10"
+              />
+            </div>
+
+            <button
+              type="button"
+              id="addNumberBtn"
+              class="array-btn array-btn--secondary"
+            >
+              Thêm vào mảng
+            </button>
+
+            <button
+              type="button"
+              id="quickCalculateBtn"
+              class="array-btn array-btn--primary"
+            >
+              Tính nhanh tất cả
+            </button>
+
+            <button
+              type="button"
+              id="resetArrayBtn"
+              class="array-btn array-btn--ghost"
+            >
+              Xóa mảng
+            </button>
+          </div>
+
+          <p
+            id="arrayInputMessage"
+            class="array-input-message"
+            aria-live="polite"
+          >
+            Bạn có thể nhấn Enter để thêm nhanh một số vào mảng.
+          </p>
+
+          <div class="array-current">
+            <span class="array-current__label">Mảng hiện tại</span>
+            <div id="integerArrayDisplay" class="array-current__boxes"></div>
+          </div>
+        </section>
+
+        <!-- NHÓM 1 -->
+        <div class="array-group-heading">
+          <div>
+            <span class="array-section-label">Nhóm 01</span>
+            <h2>Phân tích mảng</h2>
+          </div>
+
+          <p>Duyệt mảng, lọc dữ liệu và tìm các giá trị cần thiết.</p>
+        </div>
+
+        <div class="array-task-grid">
+          <!-- BÀI 1 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">01</span>
+
+              <div>
+                <h3>Tổng các số dương</h3>
+                <p>Cộng tất cả phần tử lớn hơn 0.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="sumPositiveBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy trực quan
+            </button>
+
+            <div
+              id="sumPositiveVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 1"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="sumPositiveFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div id="sumPositiveResult" class="array-result" aria-live="polite">
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 2 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">02</span>
+
+              <div>
+                <h3>Đếm số dương</h3>
+                <p>Đếm số phần tử lớn hơn 0.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="countPositiveBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy trực quan
+            </button>
+
+            <div
+              id="countPositiveVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 2"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="countPositiveFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="countPositiveResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 3 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">03</span>
+
+              <div>
+                <h3>Số nhỏ nhất</h3>
+                <p>Cập nhật giá trị nhỏ nhất trong quá trình duyệt.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="findMinBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy trực quan
+            </button>
+
+            <div
+              id="findMinVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 3"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="findMinFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div id="findMinResult" class="array-result" aria-live="polite">
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 4 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">04</span>
+
+              <div>
+                <h3>Số dương nhỏ nhất</h3>
+                <p>Lọc sang mảng dương rồi tìm phần tử nhỏ nhất.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="findMinPositiveBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy trực quan
+            </button>
+
+            <div
+              id="findMinPositiveVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 4"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="findMinPositiveFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="findMinPositiveResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 5 -->
+          <article class="array-task-card array-task-card--wide">
+            <header class="array-task-card__header">
+              <span class="array-task-number">05</span>
+
+              <div>
+                <h3>Số chẵn cuối cùng</h3>
+                <p>Duyệt từ trái sang phải và cập nhật biến lưu số chẵn.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="findLastEvenBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy trực quan
+            </button>
+
+            <div
+              id="findLastEvenVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 5"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="findLastEvenFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="findLastEvenResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+        </div>
+
+        <!-- NHÓM 2 -->
+        <div class="array-group-heading">
+          <div>
+            <span class="array-section-label">Nhóm 02</span>
+            <h2>Biến đổi mảng</h2>
+          </div>
+
+          <p>Quan sát phần tử đổi vị trí và mảng thay đổi trạng thái.</p>
+        </div>
+
+        <div class="array-task-grid">
+          <!-- BÀI 6 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">06</span>
+
+              <div>
+                <h3>Đổi chỗ hai phần tử</h3>
+                <p>Index của phần tử bắt đầu từ 0.</p>
+              </div>
+            </header>
+
+            <div class="array-inline-fields">
+              <div class="array-field">
+                <label for="firstPositionInput">Vị trí 1</label>
+                <input
+                  type="number"
+                  id="firstPositionInput"
+                  min="0"
+                  step="1"
+                  placeholder="0"
+                />
+              </div>
+
+              <div class="array-field">
+                <label for="secondPositionInput">Vị trí 2</label>
+                <input
+                  type="number"
+                  id="secondPositionInput"
+                  min="0"
+                  step="1"
+                  placeholder="2"
+                />
+              </div>
+            </div>
+
+            <button
+              type="button"
+              id="swapNumbersBtn"
+              class="array-btn array-btn--task"
+            >
+              Đổi vị trí
+            </button>
+
+            <div
+              id="swapNumbersVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 6"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="swapNumbersFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div id="swapNumbersResult" class="array-result" aria-live="polite">
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 7 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">07</span>
+
+              <div>
+                <h3>Sắp xếp tăng dần</h3>
+                <p>So sánh từng cặp và đổi chỗ khi sai thứ tự.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="sortAscendingBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy sắp xếp
+            </button>
+
+            <div
+              id="sortAscendingVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 7"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="sortAscendingFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="sortAscendingResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+        </div>
+
+        <!-- NHÓM 3 -->
+        <div class="array-group-heading">
+          <div>
+            <span class="array-section-label">Nhóm 03</span>
+            <h2>Kiểm tra nâng cao</h2>
+          </div>
+
+          <p>Phân loại dữ liệu và kiểm tra điều kiện đặc biệt.</p>
+        </div>
+
+        <div class="array-task-grid">
+          <!-- BÀI 8 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">08</span>
+
+              <div>
+                <h3>Số nguyên tố đầu tiên</h3>
+                <p>Dừng vòng lặp ngay khi tìm thấy số nguyên tố.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="findFirstPrimeBtn"
+              class="array-btn array-btn--task"
+            >
+              Tìm số nguyên tố
+            </button>
+
+            <div
+              id="findFirstPrimeVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 8"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="findFirstPrimeFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="findFirstPrimeResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 9 -->
+          <article class="array-task-card">
+            <header class="array-task-card__header">
+              <span class="array-task-number">09</span>
+
+              <div>
+                <h3>Đếm số nguyên</h3>
+                <p>Phân loại mảng số thực bằng Number.isInteger().</p>
+              </div>
+            </header>
+
+            <div class="array-field">
+              <label for="realArrayInput">Mảng số thực</label>
+              <input
+                type="text"
+                id="realArrayInput"
+                placeholder="1, 2.5, 3, 4.7"
+              />
+            </div>
+
+            <button
+              type="button"
+              id="countIntegerBtn"
+              class="array-btn array-btn--task"
+            >
+              Phân loại và đếm
+            </button>
+
+            <div
+              id="countIntegerVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 9"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="countIntegerFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="countIntegerResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+
+          <!-- BÀI 10 -->
+          <article class="array-task-card array-task-card--wide">
+            <header class="array-task-card__header">
+              <span class="array-task-number">10</span>
+
+              <div>
+                <h3>So sánh số âm và số dương</h3>
+                <p>Chia dữ liệu thành hai nhóm rồi so sánh số lượng.</p>
+              </div>
+            </header>
+
+            <button
+              type="button"
+              id="compareNumbersBtn"
+              class="array-btn array-btn--task"
+            >
+              Chạy so sánh
+            </button>
+
+            <div
+              id="compareNumbersVisual"
+              class="array-visual-stage"
+              aria-label="Trực quan bài 10"
+            ></div>
+
+            <div class="array-formula">
+              <span>Cách tính</span>
+              <p id="compareNumbersFormula" class="array-formula__content">
+                Nhấn nút thực hiện để xem từng bước.
+              </p>
+            </div>
+
+            <div
+              id="compareNumbersResult"
+              class="array-result"
+              aria-live="polite"
+            >
+              Chưa có kết quả
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="backToTopBtn"
+        class="array-back-to-top"
+        aria-label="Quay lại đầu trang"
+      >
+        ↑
+      </button>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

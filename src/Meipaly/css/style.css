@@ -7,7 +7,7 @@ html, body {
     
 }
 
-/* HEADER */
+/* Header */
 header{
     position: absolute;
     width: 100%;
@@ -51,7 +51,7 @@ header .active{
     color: #e62b4a;
 }
 
-/* CAROUSEL */
+/* Hero */
 .carousel{
     background-image: url('../img/home_slider.jpg');
     background-size: cover;
@@ -90,7 +90,7 @@ header .active{
     background-color: #af2239;
 }
 
-/* SHOWCASE */
+/* Portfolio showcase */
 .showcase{
     padding: 100px 0;
 }
@@ -126,24 +126,19 @@ header .active{
 }
 .showcase-items{
     height: 408px;
-    /* cha overlay */
     position: relative;
     
 }
 .showcase-overlay{
-    /* con overlay */
     position: absolute;
     
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* mã màu trong suốt rgba */
     background-color:rgba(230, 43, 74, 0.568);
-    /* trước khi hover */
     opacity: 0;
     transition: all 0.5s;
-    /* che đi phần tràn khỏi thẻ cha */
     overflow: hidden;
 }
 .showcase-items:hover .showcase-overlay{
@@ -165,12 +160,9 @@ header .active{
     transform: translateY(0);
 }
 .showcase-icon a{
-    /* padding: 6px; */
     display: block;
     width: 40px;
     height: 40px;
-    /* border-radius: 20%; */
-    /* căn giữa icon + text-align: center + line-height: "bằng với chiều cao" */
     text-align: center;
     line-height: 40px;
 
@@ -196,7 +188,7 @@ header .active{
 }
 
 
-/* NUMEBR */
+/* Statistics */
 .number{
     background-color: black;
     padding: 100px 0;
